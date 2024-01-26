@@ -4,6 +4,7 @@ import { auth, db } from "./services/firebase";
 import Login from "./components/Login";
 import Loading from "./components/Loading";
 import Sidebar from "./components/Sidebar";
+import Chat from "./components/Chat";
 import * as C from "./styles/app";
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
     return (
       <C.Container>
         <Sidebar setUserChat={setUserChat} userChat={userChat} />
+        <Chat userChat={userChat} />
       </C.Container>
     );
 };
